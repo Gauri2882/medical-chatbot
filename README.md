@@ -3,6 +3,15 @@
 
 A modern AI chatbot for medical documents using Retrieval Augmented Generation (RAG) technology.
 
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/LangChain-00A67E?logo=langchain&logoColor=white" alt="LangChain">
+  <img src="https://img.shields.io/badge/HuggingFace-FFD21E?logo=huggingface&logoColor=black" alt="HuggingFace">
+  <img src="https://img.shields.io/badge/FAISS-5C3EE8?logo=facebook&logoColor=white" alt="FAISS">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit">
+</p>
+
 ## Project Overview
 
 MediBot is a modular 3-phase chatbot project that allows users to query medical documents through a conversational interface. The system leverages state-of-the-art language models and vector database technology to provide accurate, context-aware responses.
@@ -50,13 +59,22 @@ flowchart TD
     C --> I[Response]
     I --> B
 ```
-## Future Improvements
+### Prerequisites
+- Python 3.8+
+- Pipenv
+- [HuggingFace account](https://huggingface.co/join)
 
-- Add user authentication to the UI
-- Implement self-upload document functionality
-- Support multiple documents and combined embeddings
-- Add unit testing for RAG applications
-- Expand to other document types beyond medical
+### Installation
+
+```bash
+git clone https://github.com/Gauri2882/medical-chatbot.git
+cd medical-chatbot
+pipenv install langchain langchain_community langchain_huggingface faiss-cpu pypdf
+pipenv install huggingface_hub
+pipenv install streamlit
+pipenv shell
+streamlit run medibot.py
+```
 
 ## Summary
 
@@ -67,15 +85,3 @@ MediBot represents a modern approach to document interaction:
   - Retrieval Augmented Generation (RAG)
   - Vector Embeddings
   - End-to-end RAG pipeline
-
-## Getting Started
-
-[Add your installation and usage instructions here]
-
-## Contributing
-
-Feedback and contributions are welcome! Please see the [contribution guidelines](CONTRIBUTING.md).
-
-## License
-
-[Specify your license here]
